@@ -1,0 +1,2521 @@
+<!DOCTYPE html>
+
+<html lang="fa" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>آکادمی تجارت ایوان - عضویت VIP</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap');
+
+
+body {
+
+font-family: 'Vazirmatn', sans-serif;
+
+}
+
+
+.gradient-bg {
+
+background: linear-gradient(135deg, #065f46 0%, #047857 25%, #059669 50%, #10b981 75%, #34d399 100%);
+
+background-size: 400% 400%;
+
+animation: gradientShift 15s ease infinite;
+
+}
+
+
+@keyframes gradientShift {
+
+0% { background-position: 0% 50%; }
+
+50% { background-position: 100% 50%; }
+
+100% { background-position: 0% 50%; }
+
+}
+
+
+.glass-card {
+
+background: rgba(255, 255, 255, 0.1);
+
+backdrop-filter: blur(10px);
+
+border: 1px solid rgba(255, 255, 255, 0.2);
+
+}
+
+
+.card-hover {
+
+transition: all 0.3s ease;
+
+}
+
+
+.card-hover:hover {
+
+transform: translateY(-10px) scale(1.02);
+
+box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+
+}
+
+
+.pulse-animation {
+
+animation: pulse 2s infinite;
+
+}
+
+
+@keyframes pulse {
+
+0%, 100% { opacity: 1; transform: scale(1); }
+
+50% { opacity: 0.8; transform: scale(1.05); }
+
+}
+
+
+.floating-shapes {
+
+position: absolute;
+
+width: 100%;
+
+height: 100%;
+
+overflow: hidden;
+
+z-index: 0;
+
+}
+
+
+.shape {
+
+position: absolute;
+
+background: rgba(255, 255, 255, 0.1);
+
+border-radius: 50%;
+
+animation: float 20s infinite linear;
+
+}
+
+
+@keyframes float {
+
+0% { transform: translateY(100vh) rotate(0deg); }
+
+100% { transform: translateY(-100px) rotate(360deg); }
+
+}
+
+
+.phone-modal {
+
+background: rgba(0, 0, 0, 0.8);
+
+backdrop-filter: blur(5px);
+
+}
+
+</style>
+
+</head>
+
+<body class="bg-gray-50">
+
+<!-- Phone Number Modal -->
+
+<div id="phoneModal" class="fixed inset-0 phone-modal flex items-center justify-center z-50">
+
+<div class="bg-white rounded-2xl p-8 max-w-md mx-4 shadow-2xl">
+
+<div class="text-center">
+
+<div class="mb-6">
+
+<svg class="w-16 h-16 mx-auto text-blue-600" viewBox="0 0 100 100" fill="none">
+
+<circle cx="50" cy="50" r="45" fill="currentColor" opacity="0.1"/>
+
+<path d="M30 25h40c2.5 0 5 2.5 5 5v40c0 2.5-2.5 5-5 5H30c-2.5 0-5-2.5-5-5V30c0-2.5 2.5-5 5-5z" fill="currentColor"/>
+
+<path d="M35 35h30v25H35z" fill="white"/>
+
+<circle cx="50" cy="67" r="3" fill="white"/>
+
+<text x="50" y="50" text-anchor="middle" fill="currentColor" font-size="12" font-weight="bold">ET</text>
+
+</svg>
+
+</div>
+
+<h3 class="text-2xl font-bold text-gray-800 mb-4">خوش آمدید!</h3>
+
+<p class="text-gray-600 mb-6">برای دسترسی به محتوای سایت، لطفاً شماره موبایل خود را وارد کنید</p>
+
+<form id="phoneForm" class="space-y-4">
+
+<input
+
+type="tel"
+
+id="phoneInput"
+
+placeholder="09123456789"
+
+class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none text-center text-lg"
+
+pattern="09[0-9]{9}"
+
+required
+
+>
+
+<input
+
+type="text"
+
+id="referralInput"
+
+placeholder="کد معرف (اختیاری)"
+
+class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-emerald-500 focus:outline-none text-center text-lg"
+
+maxlength="8"
+
+>
+
+<button
+
+type="submit"
+
+class="w-full bg-gradient-to-r from-emerald-600 to-red-600 text-white py-3 rounded-lg font-semibold hover:from-emerald-700 hover:to-red-700 transition-all duration-300"
+
+>
+
+ورود به سایت
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Main Content -->
+
+<div id="mainContent" class="hidden">
+
+<!-- Header -->
+
+<header class="gradient-bg text-white py-8 relative overflow-hidden">
+
+<div class="floating-shapes">
+
+<div class="shape w-20 h-20" style="left: 10%; animation-delay: 0s;"></div>
+
+<div class="shape w-32 h-32" style="left: 80%; animation-delay: 5s;"></div>
+
+<div class="shape w-16 h-16" style="left: 60%; animation-delay: 10s;"></div>
+
+</div>
+
+<div class="container mx-auto px-4 relative z-10">
+
+<div class="flex items-center justify-between">
+
+<div class="flex items-center space-x-4 space-x-reverse">
+
+<!-- Custom Logo -->
+
+<div class="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center backdrop-blur-sm">
+
+<svg class="w-12 h-12 text-white" viewBox="0 0 100 100" fill="none">
+
+<circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="3" fill="none"/>
+
+<path d="M30 45 L45 60 L70 35" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+<path d="M25 25 L75 25 M25 75 L75 75" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+
+<circle cx="50" cy="50" r="8" fill="currentColor"/>
+
+</svg>
+
+</div>
+
+<div>
+
+<h1 class="text-3xl font-bold">آکادمی تجارت ایوان</h1>
+
+<p class="text-blue-100 text-lg">EvanTradeAcademy</p>
+
+</div>
+
+</div>
+
+<div class="flex items-center space-x-6 space-x-reverse">
+
+<!-- Media Categories -->
+
+<div class="flex space-x-2 space-x-reverse">
+
+<button onclick="openMediaModal('educational')" class="bg-white bg-opacity-20 backdrop-blur-sm rounded-xl p-3 hover:bg-opacity-30 transition-all duration-300 group">
+
+<div class="text-2xl group-hover:scale-110 transition-transform">📚</div>
+
+<div class="text-xs text-white mt-1">آموزشی</div>
+
+</button>
+
+<button onclick="openMediaModal('psychology')" class="bg-white bg-opacity-20 backdrop-blur-sm rounded-xl p-3 hover:bg-opacity-30 transition-all duration-300 group">
+
+<div class="text-2xl group-hover:scale-110 transition-transform">🧠</div>
+
+<div class="text-xs text-white mt-1">روانشناسی</div>
+
+</button>
+
+<button onclick="openMediaModal('documents')" class="bg-white bg-opacity-20 backdrop-blur-sm rounded-xl p-3 hover:bg-opacity-30 transition-all duration-300 group">
+
+<div class="text-2xl group-hover:scale-110 transition-transform">📄</div>
+
+<div class="text-xs text-white mt-1">اسناد</div>
+
+</button>
+
+<button onclick="openMediaModal('media')" class="bg-white bg-opacity-20 backdrop-blur-sm rounded-xl p-3 hover:bg-opacity-30 transition-all duration-300 group">
+
+<div class="text-2xl group-hover:scale-110 transition-transform">🎬</div>
+
+<div class="text-xs text-white mt-1">رسانه</div>
+
+</button>
+
+</div>
+
+
+<div class="flex items-center space-x-3 space-x-reverse">
+
+<span class="text-4xl">💎</span>
+
+<span class="font-bold text-xl">VIP</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+<!-- Hero Section -->
+
+<section class="py-20 bg-gradient-to-br from-gray-800 to-gray-900 relative overflow-hidden">
+
+<div class="absolute inset-0 bg-gradient-to-r from-emerald-600/10 to-red-600/10"></div>
+
+<div class="container mx-auto px-4 text-center relative z-10">
+
+<h2 class="text-5xl font-bold text-white mb-8 leading-tight">
+
+به جمع معامله‌گران <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-red-400">حرفه‌ای</span> بپیوندید
+
+</h2>
+
+<p class="text-xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed">
+
+با عضویت VIP در کانال تلگرام ما، به سیگنال‌های طلایی، آموزش‌های تخصصی و پشتیبانی ۲۴ ساعته دسترسی پیدا کنید
+
+</p>
+
+<div class="pulse-animation inline-block">
+
+<button onclick="scrollToPlans()" class="bg-gradient-to-r from-emerald-600 to-red-600 text-white px-10 py-5 rounded-full text-xl font-semibold hover:from-emerald-700 hover:to-red-700 transition-all duration-300 shadow-2xl">
+
+مشاهده پکیج‌های VIP
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Features Section -->
+
+<section class="py-20 bg-gray-100">
+
+<div class="container mx-auto px-4">
+
+<h3 class="text-4xl font-bold text-center text-gray-800 mb-16">
+
+مزایای عضویت VIP
+
+</h3>
+
+<div class="grid md:grid-cols-3 gap-10">
+
+<div class="bg-gradient-to-br from-emerald-50 to-emerald-100 p-10 rounded-2xl shadow-lg card-hover text-center border border-emerald-200">
+
+<div class="text-6xl mb-6">🎯</div>
+
+<h4 class="text-2xl font-semibold mb-6 text-gray-800">سیگنال‌های دقیق</h4>
+
+<p class="text-gray-600 text-lg leading-relaxed">سیگنال‌های معاملاتی با دقت بالا و نرخ موفقیت ۸۵٪</p>
+
+</div>
+
+<div class="bg-gradient-to-br from-gray-700 to-gray-800 p-10 rounded-2xl shadow-lg card-hover text-center border border-gray-600">
+
+<div class="text-6xl mb-6">📚</div>
+
+<h4 class="text-2xl font-semibold mb-6 text-white">آموزش تخصصی</h4>
+
+<p class="text-gray-300 text-lg leading-relaxed">دوره‌های جامع تحلیل تکنیکال و بنیادی</p>
+
+</div>
+
+<div class="bg-gradient-to-br from-red-50 to-red-100 p-10 rounded-2xl shadow-lg card-hover text-center border border-red-200">
+
+<div class="text-6xl mb-6">🔧</div>
+
+<h4 class="text-2xl font-semibold mb-6 text-gray-800">پشتیبانی ۲۴/۷</h4>
+
+<p class="text-gray-600 text-lg leading-relaxed">پاسخگویی سریع به سوالات و مشاوره رایگان</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Pricing Plans -->
+
+<section id="plans" class="py-20 bg-gradient-to-br from-gray-800 to-gray-900">
+
+<div class="container mx-auto px-4">
+
+<h3 class="text-4xl font-bold text-center text-white mb-16">
+
+پکیج‌های عضویت VIP
+
+</h3>
+
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+
+<!-- Basic Plan -->
+
+<div class="bg-white rounded-2xl p-8 card-hover shadow-xl border border-gray-100">
+
+<div class="text-center">
+
+<h4 class="text-2xl font-bold text-gray-800 mb-3">پایه</h4>
+
+<div class="text-5xl font-bold text-blue-600 mb-4">$10</div>
+
+<p class="text-gray-600 mb-8 text-lg">هفتگی</p>
+
+</div>
+
+<ul class="space-y-4 mb-10">
+
+<li class="flex items-center">
+
+<span class="text-green-500 ml-3 text-xl">✓</span>
+
+<span class="text-gray-700">سیگنال‌های روزانه</span>
+
+</li>
+
+<li class="flex items-center">
+
+<span class="text-green-500 ml-3 text-xl">✓</span>
+
+<span class="text-gray-700">تحلیل بازار</span>
+
+</li>
+
+<li class="flex items-center">
+
+<span class="text-green-500 ml-3 text-xl">✓</span>
+
+<span class="text-gray-700">پشتیبانی در ساعات کاری</span>
+
+</li>
+
+</ul>
+
+<button onclick="selectPlan('basic')" class="w-full bg-emerald-600 text-white py-4 rounded-xl font-semibold hover:bg-emerald-700 transition-colors text-lg">
+
+انتخاب پکیج
+
+</button>
+
+</div>
+
+<!-- Premium Plan -->
+
+<div class="bg-white rounded-2xl p-8 card-hover shadow-xl border-2 border-gray-700 relative">
+
+<div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+
+<span class="bg-gray-700 text-white px-6 py-2 rounded-full text-sm font-semibold">محبوب</span>
+
+</div>
+
+<div class="text-center">
+
+<h4 class="text-2xl font-bold text-gray-800 mb-3">حرفه‌ای</h4>
+
+<div class="text-5xl font-bold text-gray-700 mb-4">$25</div>
+
+<p class="text-gray-600 mb-8 text-lg">ماهانه</p>
+
+</div>
+
+<ul class="space-y-4 mb-10">
+
+<li class="flex items-center">
+
+<span class="text-green-500 ml-3 text-xl">✓</span>
+
+<span class="text-gray-700">همه مزایای پکیج پایه</span>
+
+</li>
+
+<li class="flex items-center">
+
+<span class="text-green-500 ml-3 text-xl">✓</span>
+
+<span class="text-gray-700">آموزش‌های ویدیویی</span>
+
+</li>
+
+<li class="flex items-center">
+
+<span class="text-green-500 ml-3 text-xl">✓</span>
+
+<span class="text-gray-700">پشتیبانی ۲۴ ساعته</span>
+
+</li>
+
+<li class="flex items-center">
+
+<span class="text-green-500 ml-3 text-xl">✓</span>
+
+<span class="text-gray-700">گزارش‌های تحلیلی</span>
+
+</li>
+
+</ul>
+
+<button onclick="selectPlan('premium')" class="w-full bg-gray-700 text-white py-4 rounded-xl font-semibold hover:bg-gray-800 transition-colors text-lg">
+
+انتخاب پکیج
+
+</button>
+
+</div>
+
+<!-- VIP Plan -->
+
+<div class="bg-white rounded-2xl p-8 card-hover shadow-xl border border-red-400">
+
+<div class="text-center">
+
+<h4 class="text-2xl font-bold text-gray-800 mb-3">VIP</h4>
+
+<div class="text-5xl font-bold text-red-600 mb-4">$60</div>
+
+<p class="text-gray-600 mb-8 text-lg">سه ماهه</p>
+
+</div>
+
+<ul class="space-y-4 mb-10">
+
+<li class="flex items-center">
+
+<span class="text-green-500 ml-3 text-xl">✓</span>
+
+<span class="text-gray-700">همه مزایای پکیج‌های قبلی</span>
+
+</li>
+
+<li class="flex items-center">
+
+<span class="text-green-500 ml-3 text-xl">✓</span>
+
+<span class="text-gray-700">سیگنال‌های اختصاصی</span>
+
+</li>
+
+<li class="flex items-center">
+
+<span class="text-green-500 ml-3 text-xl">✓</span>
+
+<span class="text-gray-700">تحلیل پورتفولیو</span>
+
+</li>
+
+<li class="flex items-center">
+
+<span class="text-green-500 ml-3 text-xl">✓</span>
+
+<span class="text-gray-700">اولویت در پشتیبانی</span>
+
+</li>
+
+</ul>
+
+<button onclick="selectPlan('vip')" class="w-full bg-red-600 text-white py-4 rounded-xl font-semibold hover:bg-red-700 transition-colors text-lg">
+
+انتخاب پکیج
+
+</button>
+
+</div>
+
+<!-- Consultation Plan -->
+
+<div class="bg-white rounded-2xl p-8 card-hover shadow-xl border border-emerald-400">
+
+<div class="text-center">
+
+<h4 class="text-xl font-bold text-gray-800 mb-3">مشاوره تخصصی</h4>
+
+<div class="text-5xl font-bold text-emerald-600 mb-4">$99</div>
+
+<p class="text-gray-600 mb-8 text-lg">یک ساعت</p>
+
+</div>
+
+<ul class="space-y-4 mb-10">
+
+<li class="flex items-center">
+
+<span class="text-green-500 ml-3 text-xl">✓</span>
+
+<span class="text-gray-700">روانشناسی معاملات</span>
+
+</li>
+
+<li class="flex items-center">
+
+<span class="text-green-500 ml-3 text-xl">✓</span>
+
+<span class="text-gray-700">مدیریت ریسک</span>
+
+</li>
+
+<li class="flex items-center">
+
+<span class="text-green-500 ml-3 text-xl">✓</span>
+
+<span class="text-gray-700">بهینه‌سازی استراتژی</span>
+
+</li>
+
+<li class="flex items-center">
+
+<span class="text-green-500 ml-3 text-xl">✓</span>
+
+<span class="text-gray-700">جلسه خصوصی با اساتید</span>
+
+</li>
+
+</ul>
+
+<button onclick="selectPlan('consultation')" class="w-full bg-emerald-600 text-white py-4 rounded-xl font-semibold hover:bg-emerald-700 transition-colors text-lg">
+
+رزرو مشاوره
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Referral Tree Section -->
+
+<section class="py-20 bg-gray-100">
+
+<div class="container mx-auto px-4">
+
+<h3 class="text-4xl font-bold text-center text-gray-800 mb-16">
+
+نمودار درختی معرف‌ها
+
+</h3>
+
+<div class="max-w-4xl mx-auto">
+
+<div class="bg-white rounded-2xl p-8 shadow-xl">
+
+<div class="text-center mb-8">
+
+<div class="inline-block bg-emerald-100 px-6 py-3 rounded-full">
+
+<span class="text-emerald-800 font-semibold">کد معرف شما: </span>
+
+<span id="userReferralCode" class="text-emerald-600 font-bold text-lg">در حال بارگذاری...</span>
+
+<button onclick="copyReferralCode()" class="mr-3 text-emerald-600 hover:text-emerald-800 transition-colors">
+
+📋
+
+</button>
+
+</div>
+
+</div>
+
+
+<div id="referralTree" class="space-y-4">
+
+<!-- Tree will be populated by JavaScript -->
+
+</div>
+
+
+<div class="mt-8 p-6 bg-gradient-to-r from-emerald-50 to-red-50 rounded-xl">
+
+<h4 class="text-xl font-bold text-gray-800 mb-4">🎁 مزایای سیستم معرف</h4>
+
+<div class="text-sm text-gray-600 mb-6 space-y-2">
+
+<p>• به ازای هر نفر خرید اشتراک با کد معرف شما، روی تمدید اشتراک مشابه ۱۰٪ تخفیف میگیرید</p>
+
+<p>• اگر ۱۰ نفر با کد معرف شما اشتراک ماهانه تهیه کنند، یک ماه اشتراک رایگان دارید</p>
+
+<p>• در صورت خرید ۵۰ نفر اشتراک ماهانه یا ۲۵ نفر ۳ ماه، مشاوره VIP رایگان دریافت می‌کنید</p>
+
+<p>• <strong>ویژه:</strong> با معرفی ۱۰۰ نفر، ۵۰٪ تخفیف دائمی روی پکیج ماهانه!</p>
+
+</div>
+
+<h4 class="text-xl font-bold text-gray-800 mb-4">📊 آمار معرف‌ها</h4>
+
+<div class="grid md:grid-cols-4 gap-4">
+
+<div class="text-center">
+
+<div class="text-3xl font-bold text-emerald-600" id="totalReferrals">0</div>
+
+<div class="text-gray-600">کل معرف‌ها</div>
+
+</div>
+
+<div class="text-center">
+
+<div class="text-3xl font-bold text-blue-600" id="confirmedPurchases">0</div>
+
+<div class="text-gray-600">خریدهای تایید شده</div>
+
+</div>
+
+<div class="text-center">
+
+<div class="text-3xl font-bold text-red-600" id="totalDiscount">$0</div>
+
+<div class="text-gray-600">کل تخفیف دریافتی</div>
+
+</div>
+
+<div class="text-center">
+
+<div class="text-3xl font-bold text-gray-700" id="referralLevel">1</div>
+
+<div class="text-gray-600">سطح معرف</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Channel Information Section -->
+
+<section class="py-20 bg-white">
+
+<div class="container mx-auto px-4">
+
+<h3 class="text-4xl font-bold text-center text-gray-800 mb-16">
+
+📢 کانال اصلی ایوان
+
+</h3>
+
+<div class="max-w-4xl mx-auto">
+
+<div class="bg-gradient-to-br from-emerald-50 to-red-50 rounded-2xl p-10 shadow-xl border border-emerald-200">
+
+<div class="text-center mb-8">
+
+<div class="text-6xl mb-4">📱</div>
+
+<h4 class="text-3xl font-bold text-gray-800 mb-4">کانال رایگان آکادمی تجارت ایوان</h4>
+
+<p class="text-xl text-gray-600 mb-6">دسترسی رایگان به محتوای ارزشمند روزانه</p>
+
+<a href="https://t.me/evantradeacademy" target="_blank" class="inline-block bg-gradient-to-r from-emerald-600 to-red-600 text-white px-8 py-4 rounded-full font-semibold hover:from-emerald-700 hover:to-red-700 transition-all duration-300 text-lg shadow-lg">
+
+🔗 عضویت در کانال رایگان
+
+</a>
+
+</div>
+
+
+<div class="grid md:grid-cols-2 gap-8">
+
+<div class="space-y-6">
+
+<h5 class="text-2xl font-bold text-gray-800 mb-4">📋 محتوای روزانه کانال:</h5>
+
+<div class="space-y-4">
+
+<div class="flex items-start">
+
+<span class="text-2xl ml-4 mt-1">📰</span>
+
+<div>
+
+<div class="font-semibold text-gray-800">اخبار مهم روزانه</div>
+
+<div class="text-gray-600 text-sm">آخرین اخبار تأثیرگذار بر بازارهای مالی</div>
+
+</div>
+
+</div>
+
+<div class="flex items-start">
+
+<span class="text-2xl ml-4 mt-1">📊</span>
+
+<div>
+
+<div class="font-semibold text-gray-800">نتیجه هفتگی ترید های VIP</div>
+
+<div class="text-gray-600 text-sm">گزارش عملکرد سیگنال‌های کانال VIP</div>
+
+</div>
+
+</div>
+
+<div class="flex items-start">
+
+<span class="text-2xl ml-4 mt-1">📈</span>
+
+<div>
+
+<div class="font-semibold text-gray-800">تحلیل های بلند مدت</div>
+
+<div class="text-gray-600 text-sm">بررسی روندهای کلان بازار</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="space-y-6">
+
+<h5 class="text-2xl font-bold text-gray-800 mb-4">🎓 محتوای آموزشی:</h5>
+
+<div class="space-y-4">
+
+<div class="flex items-start">
+
+<span class="text-2xl ml-4 mt-1">📚</span>
+
+<div>
+
+<div class="font-semibold text-gray-800">موضوعات آموزشی</div>
+
+<div class="text-gray-600 text-sm">آموزش مفاهیم پایه و پیشرفته معاملات</div>
+
+</div>
+
+</div>
+
+<div class="flex items-start">
+
+<span class="text-2xl ml-4 mt-1">🧠</span>
+
+<div>
+
+<div class="font-semibold text-gray-800">روانشناسی معاملات</div>
+
+<div class="text-gray-600 text-sm">نکات مهم کنترل احساسات در معاملات</div>
+
+</div>
+
+</div>
+
+<div class="flex items-start">
+
+<span class="text-2xl ml-4 mt-1">💡</span>
+
+<div>
+
+<div class="font-semibold text-gray-800">نکات و ترفندها</div>
+
+<div class="text-gray-600 text-sm">راهکارهای عملی برای بهبود معاملات</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="mt-8 p-6 bg-white rounded-xl border border-emerald-200">
+
+<div class="text-center">
+
+<h6 class="text-lg font-bold text-gray-800 mb-2">🎯 چرا کانال رایگان ما را دنبال کنید؟</h6>
+
+<p class="text-gray-600">
+
+حتی بدون عضویت VIP، می‌تونید از محتوای ارزشمند روزانه ما بهره‌مند بشید و دانش معاملاتی‌تون رو افزایش بدید!
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Contact Section -->
+
+<section class="py-20 gradient-bg text-white relative overflow-hidden">
+
+<div class="floating-shapes">
+
+<div class="shape w-24 h-24" style="left: 20%; animation-delay: 2s;"></div>
+
+<div class="shape w-16 h-16" style="left: 70%; animation-delay: 8s;"></div>
+
+</div>
+
+<div class="container mx-auto px-4 text-center relative z-10">
+
+<h3 class="text-4xl font-bold mb-10">آماده شروع هستید؟</h3>
+
+<p class="text-xl mb-12 text-emerald-100 max-w-2xl mx-auto">
+
+برای خرید و دریافت اطلاعات بیشتر با ما در تلگرام در تماس باشید
+
+</p>
+
+<div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+
+<a href="https://t.me/evantradeacademy" target="_blank" class="bg-white text-blue-600 px-10 py-5 rounded-full font-semibold hover:bg-gray-100 transition-colors flex items-center text-lg shadow-lg hover:scale-105 transform transition-all duration-300">
+
+<span class="ml-3 text-2xl">📱</span>
+
+کانال تلگرام
+
+</a>
+
+<button onclick="showContactInfo()" class="bg-blue-800 text-white px-10 py-5 rounded-full font-semibold hover:bg-blue-900 transition-colors flex items-center text-lg shadow-lg">
+
+<span class="ml-3 text-2xl">💬</span>
+
+تماس با پشتیبانی
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Footer -->
+
+<footer class="bg-gray-900 text-white py-12">
+
+<div class="container mx-auto px-4 text-center">
+
+<div class="flex items-center justify-center space-x-4 space-x-reverse mb-6">
+
+<svg class="w-10 h-10 text-blue-400" viewBox="0 0 100 100" fill="none">
+
+<circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="3" fill="none"/>
+
+<path d="M30 45 L45 60 L70 35" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+<circle cx="50" cy="50" r="8" fill="currentColor"/>
+
+</svg>
+
+<span class="text-2xl font-bold">آکادمی تجارت ایوان</span>
+
+</div>
+
+<p class="text-gray-400 text-lg">
+
+© ۲۰۲۴ EvanTradeAcademy. تمامی حقوق محفوظ است.
+
+</p>
+
+</div>
+
+</footer>
+
+<!-- Modal for Contact Info -->
+
+<div id="contactModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+
+<div class="bg-white rounded-2xl p-10 max-w-md mx-4 shadow-2xl">
+
+<div class="text-center">
+
+<h4 class="text-3xl font-bold text-gray-800 mb-6">اطلاعات تماس</h4>
+
+<div class="space-y-6">
+
+<div class="flex items-center justify-center text-lg">
+
+<a href="https://t.me/evantradeacademy" target="_blank" class="ml-3 text-2xl cursor-pointer hover:scale-110 transition-transform">📱</a>
+
+<a href="https://t.me/evantradeacademy" target="_blank" class="hover:text-blue-600 transition-colors">@evantradeacademy</a>
+
+</div>
+
+<div class="flex items-center justify-center text-lg">
+
+<a href="https://t.me/evantradeadmin" target="_blank" class="ml-3 text-2xl cursor-pointer hover:scale-110 transition-transform">💬</a>
+
+<a href="https://t.me/evantradeadmin" target="_blank" class="hover:text-blue-600 transition-colors">پشتیبانی: @evantradeadmin</a>
+
+</div>
+
+<div class="flex items-center justify-center text-lg">
+
+<span class="ml-3 text-2xl">⏰</span>
+
+<span>پاسخگویی: ۹ صبح تا ۱۱ شب</span>
+
+</div>
+
+</div>
+
+<button onclick="closeContactModal()" class="mt-8 bg-blue-600 text-white px-8 py-3 rounded-xl hover:bg-blue-700 transition-colors text-lg">
+
+بستن
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Purchase Modal -->
+
+<div id="purchaseModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+
+<div class="bg-white rounded-2xl p-10 max-w-md mx-4 shadow-2xl">
+
+<div class="text-center">
+
+<h4 class="text-3xl font-bold text-gray-800 mb-6">خرید پکیج</h4>
+
+<div id="selectedPlanInfo" class="mb-8"></div>
+
+<p class="text-gray-600 mb-8 text-lg">
+
+برای تکمیل خرید، لطفاً با پشتیبانی در تلگرام تماس بگیرید
+
+</p>
+
+<div id="discountInfo" class="mb-6 hidden">
+
+<div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4">
+
+<div class="flex items-center">
+
+<span class="text-2xl mr-3">🎉</span>
+
+<div>
+
+<div class="font-semibold text-emerald-800">تبریک! شما تخفیف دارید</div>
+
+<div class="text-emerald-600" id="discountAmount">تخفیف ۱۰٪ برای معرف شدن</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="space-y-4">
+
+<a href="https://t.me/evantradeadmin" target="_blank" class="block bg-emerald-600 text-white px-8 py-4 rounded-xl hover:bg-emerald-700 transition-colors text-lg">
+
+ارتباط با پشتیبانی
+
+</a>
+
+<button onclick="closePurchaseModal()" class="block w-full bg-gray-300 text-gray-700 px-8 py-4 rounded-xl hover:bg-gray-400 transition-colors text-lg">
+
+بستن
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Media Modal -->
+
+<div id="mediaModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+
+<div class="bg-white rounded-2xl p-8 max-w-4xl mx-4 shadow-2xl max-h-[90vh] overflow-y-auto">
+
+<div class="text-center mb-8">
+
+<h4 id="mediaModalTitle" class="text-3xl font-bold text-gray-800 mb-4">📚 محتوای آموزشی</h4>
+
+<p class="text-gray-600">مجموعه کامل منابع آموزشی و تخصصی</p>
+
+</div>
+
+
+<div id="mediaContent" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+<!-- Content will be populated by JavaScript -->
+
+</div>
+
+
+<div class="mt-8 pt-6 border-t border-gray-200">
+
+<div class="flex justify-center">
+
+<button onclick="closeMediaModal()" class="bg-gray-300 text-gray-700 px-8 py-3 rounded-xl hover:bg-gray-400 transition-colors text-lg">
+
+بستن
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Admin Panel Modal -->
+
+<div id="adminModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+
+<div class="bg-white rounded-2xl p-8 max-w-4xl mx-4 shadow-2xl max-h-[90vh] overflow-y-auto">
+
+<div class="text-center mb-8">
+
+<h4 class="text-3xl font-bold text-gray-800 mb-4">🔧 پنل مدیریت</h4>
+
+<p class="text-gray-600">مدیریت خریدهای تایید شده معرف‌ها</p>
+
+</div>
+
+
+<div class="grid md:grid-cols-2 gap-8">
+
+<!-- Left Panel: User List -->
+
+<div>
+
+<h5 class="text-xl font-bold text-gray-800 mb-4">📋 لیست کاربران</h5>
+
+<div id="adminUserList" class="space-y-3 max-h-96 overflow-y-auto">
+
+<!-- Will be populated by JavaScript -->
+
+</div>
+
+</div>
+
+
+<!-- Right Panel: Purchase Management -->
+
+<div>
+
+<h5 class="text-xl font-bold text-gray-800 mb-4">💰 مدیریت خریدها</h5>
+
+<div id="selectedUserInfo" class="mb-4 p-4 bg-gray-50 rounded-xl">
+
+<p class="text-gray-500">کاربری را انتخاب کنید</p>
+
+</div>
+
+
+<div id="referralPurchasesList" class="space-y-3 max-h-64 overflow-y-auto mb-4">
+
+<!-- Will be populated when user is selected -->
+
+</div>
+
+
+<div class="space-y-3">
+
+<button onclick="confirmAllPurchases()" class="w-full bg-emerald-600 text-white py-3 rounded-xl hover:bg-emerald-700 transition-colors">
+
+✅ تایید همه خریدها
+
+</button>
+
+<button onclick="resetAllPurchases()" class="w-full bg-red-600 text-white py-3 rounded-xl hover:bg-red-700 transition-colors">
+
+🔄 ریست همه خریدها
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="mt-8 pt-6 border-t border-gray-200">
+
+<div class="flex justify-between items-center">
+
+<div class="text-sm text-gray-500">
+
+برای دسترسی به پنل: کلیدهای Ctrl+Shift+A را فشار دهید
+
+</div>
+
+<button onclick="closeAdminModal()" class="bg-gray-300 text-gray-700 px-6 py-2 rounded-xl hover:bg-gray-400 transition-colors">
+
+بستن
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+// Referral system
+
+function generateReferralCode() {
+
+return Math.random().toString(36).substring(2, 10).toUpperCase();
+
+}
+
+function saveUserData(phone, referralCode, referredBy = null) {
+
+const users = JSON.parse(localStorage.getItem('users') || '{}');
+
+const timestamp = new Date().toLocaleString('fa-IR');
+
+
+if (!users[phone]) {
+
+// First time registration - create new user
+
+users[phone] = {
+
+phone,
+
+referralCode,
+
+referredBy,
+
+timestamp,
+
+referrals: [],
+
+confirmedPurchases: [], // Track confirmed purchases from referrals
+
+totalDiscount: 0,
+
+level: 1
+
+};
+
+
+// Add to referrer's list if referred
+
+if (referredBy && users[referredBy]) {
+
+users[referredBy].referrals.push({
+
+phone: phone,
+
+timestamp: timestamp,
+
+hasPurchased: false, // Track if this referral has made a purchase
+
+purchaseType: null,
+
+purchaseDate: null
+
+});
+
+// Don't give discount until purchase is confirmed
+
+}
+
+} else {
+
+// User already exists - keep existing referral code and data
+
+// Only update current session, don't change referral code or referrer
+
+console.log(`کاربر ${phone} قبلاً ثبت‌نام کرده - کد معرف ثابت: ${users[phone].referralCode}`);
+
+}
+
+
+localStorage.setItem('users', JSON.stringify(users));
+
+localStorage.setItem('currentUser', phone);
+
+return users[phone];
+
+}
+
+function findUserByReferralCode(code) {
+
+const users = JSON.parse(localStorage.getItem('users') || '{}');
+
+return Object.values(users).find(user => user.referralCode === code);
+
+}
+
+function getCurrentUser() {
+
+const currentUserPhone = localStorage.getItem('currentUser');
+
+const users = JSON.parse(localStorage.getItem('users') || '{}');
+
+return users[currentUserPhone];
+
+}
+
+// Phone number collection system
+
+function savePhoneNumber(phone) {
+
+const phones = JSON.parse(localStorage.getItem('phoneNumbers') || '[]');
+
+const timestamp = new Date().toLocaleString('fa-IR');
+
+phones.push({ phone, timestamp });
+
+localStorage.setItem('phoneNumbers', JSON.stringify(phones));
+
+}
+
+// Function for admin to view collected numbers
+
+function getPhoneNumbers() {
+
+const phones = JSON.parse(localStorage.getItem('phoneNumbers') || '[]');
+
+console.table(phones);
+
+return phones;
+
+}
+
+// Function for admin to view referral data
+
+function getReferralData() {
+
+const users = JSON.parse(localStorage.getItem('users') || '{}');
+
+console.table(users);
+
+return users;
+
+}
+
+// Make functions globally accessible
+
+window.getPhoneNumbers = getPhoneNumbers;
+
+window.getReferralData = getReferralData;
+
+document.getElementById('phoneForm').addEventListener('submit', function(e) {
+
+e.preventDefault();
+
+const phoneInput = document.getElementById('phoneInput');
+
+const referralInput = document.getElementById('referralInput');
+
+const phone = phoneInput.value.trim();
+
+const referralCode = referralInput.value.trim().toUpperCase();
+
+
+if (phone.match(/^09[0-9]{9}$/)) {
+
+let referredBy = null;
+
+
+// Check if referral code is valid
+
+if (referralCode) {
+
+const referrer = findUserByReferralCode(referralCode);
+
+if (referrer) {
+
+referredBy = referrer.phone;
+
+} else {
+
+alert('کد معرف نامعتبر است');
+
+return;
+
+}
+
+}
+
+
+savePhoneNumber(phone);
+
+
+// Check if user already exists
+
+const existingUsers = JSON.parse(localStorage.getItem('users') || '{}');
+
+let userReferralCode;
+
+let isNewUser = false;
+
+
+if (existingUsers[phone]) {
+
+// User exists - ALWAYS use existing referral code
+
+userReferralCode = existingUsers[phone].referralCode;
+
+console.log(`کاربر موجود - کد معرف ثابت: ${userReferralCode}`);
+
+} else {
+
+// New user - generate new referral code only once
+
+userReferralCode = generateReferralCode();
+
+isNewUser = true;
+
+console.log(`کاربر جدید - کد معرف جدید: ${userReferralCode}`);
+
+}
+
+
+// Only pass referredBy for new users to prevent duplicate referrals
+
+saveUserData(phone, userReferralCode, isNewUser ? referredBy : null);
+
+
+document.getElementById('phoneModal').style.display = 'none';
+
+document.getElementById('mainContent').classList.remove('hidden');
+
+
+// Update referral display
+
+updateReferralDisplay();
+
+
+// Show success message if referred (only for new users)
+
+if (referredBy && isNewUser) {
+
+setTimeout(() => {
+
+alert('🎉 تبریک! شما با کد معرف وارد شدید و ۱۰٪ تخفیف دریافت کردید!');
+
+}, 1000);
+
+}
+
+} else {
+
+alert('لطفاً شماره موبایل معتبر وارد کنید');
+
+}
+
+});
+
+function scrollToPlans() {
+
+document.getElementById('plans').scrollIntoView({
+
+behavior: 'smooth'
+
+});
+
+}
+
+function updateReferralDisplay() {
+
+const currentUser = getCurrentUser();
+
+if (!currentUser) return;
+
+
+// Update referral code display
+
+document.getElementById('userReferralCode').textContent = currentUser.referralCode;
+
+
+// Calculate confirmed purchases count
+
+const confirmedCount = currentUser.confirmedPurchases ? currentUser.confirmedPurchases.length : 0;
+
+
+// Update stats
+
+document.getElementById('totalReferrals').textContent = currentUser.referrals ? currentUser.referrals.length : 0;
+
+document.getElementById('confirmedPurchases').textContent = confirmedCount;
+
+document.getElementById('totalDiscount').textContent = `$${currentUser.totalDiscount || 0}`;
+
+document.getElementById('referralLevel').textContent = currentUser.level || 1;
+
+
+// Update referral tree
+
+updateReferralTree();
+
+}
+
+function updateReferralTree() {
+
+const currentUser = getCurrentUser();
+
+const users = JSON.parse(localStorage.getItem('users') || '{}');
+
+const treeContainer = document.getElementById('referralTree');
+
+
+if (!currentUser || currentUser.referrals.length === 0) {
+
+treeContainer.innerHTML = `
+
+<div class="text-center py-8 text-gray-500">
+
+<div class="text-4xl mb-4">🌱</div>
+
+<p class="text-lg">هنوز کسی با کد معرف شما ثبت‌نام نکرده</p>
+
+<p class="text-sm mt-2">کد معرف خود را با دوستان به اشتراک بگذارید</p>
+
+</div>
+
+`;
+
+return;
+
+}
+
+
+let treeHTML = '<div class="space-y-3">';
+
+
+currentUser.referrals.forEach((referral, index) => {
+
+// Handle both old format (string) and new format (object)
+
+const referralPhone = typeof referral === 'string' ? referral : referral.phone;
+
+const hasPurchased = typeof referral === 'object' ? referral.hasPurchased : false;
+
+const purchaseType = typeof referral === 'object' ? referral.purchaseType : null;
+
+
+const referralUser = users[referralPhone];
+
+if (referralUser) {
+
+const statusIcon = hasPurchased ? '✅' : '⏳';
+
+const statusText = hasPurchased ? `خرید: ${purchaseType}` : 'منتظر خرید';
+
+const statusColor = hasPurchased ? 'text-emerald-600' : 'text-orange-500';
+
+
+treeHTML += `
+
+<div class="flex items-center p-4 bg-gradient-to-r from-emerald-50 to-red-50 rounded-xl border border-emerald-200">
+
+<div class="w-10 h-10 bg-emerald-500 text-white rounded-full flex items-center justify-center font-bold mr-4">
+
+${index + 1}
+
+</div>
+
+<div class="flex-1">
+
+<div class="font-semibold text-gray-800">${referralUser.phone}</div>
+
+<div class="text-sm text-gray-600">کد: ${referralUser.referralCode} | ${referralUser.timestamp}</div>
+
+<div class="text-sm ${statusColor}">${statusIcon} ${statusText}</div>
+
+</div>
+
+<div class="text-right">
+
+<div class="text-lg font-bold ${hasPurchased ? 'text-emerald-600' : 'text-gray-400'}">
+
+${hasPurchased ? '+$5' : '$0'}
+
+</div>
+
+<div class="text-sm text-gray-500">تخفیف</div>
+
+</div>
+
+</div>
+
+`;
+
+}
+
+});
+
+
+treeHTML += '</div>';
+
+treeContainer.innerHTML = treeHTML;
+
+}
+
+// Admin Functions
+
+function confirmPurchase(userPhone, referralPhone, purchaseType) {
+
+const users = JSON.parse(localStorage.getItem('users') || '{}');
+
+const user = users[userPhone];
+
+
+if (user && user.referrals) {
+
+// Find and update the referral
+
+const referralIndex = user.referrals.findIndex(ref =>
+
+(typeof ref === 'string' ? ref : ref.phone) === referralPhone
+
+);
+
+
+if (referralIndex !== -1) {
+
+// Convert to object format if needed
+
+if (typeof user.referrals[referralIndex] === 'string') {
+
+user.referrals[referralIndex] = {
+
+phone: user.referrals[referralIndex],
+
+timestamp: new Date().toLocaleString('fa-IR'),
+
+hasPurchased: false,
+
+purchaseType: null,
+
+purchaseDate: null
+
+};
+
+}
+
+
+// Confirm the purchase
+
+user.referrals[referralIndex].hasPurchased = true;
+
+user.referrals[referralIndex].purchaseType = purchaseType;
+
+user.referrals[referralIndex].purchaseDate = new Date().toLocaleString('fa-IR');
+
+
+// Add to confirmed purchases
+
+if (!user.confirmedPurchases) user.confirmedPurchases = [];
+
+user.confirmedPurchases.push({
+
+phone: referralPhone,
+
+purchaseType: purchaseType,
+
+date: new Date().toLocaleString('fa-IR')
+
+});
+
+
+// Update discount and level based on confirmed purchases
+
+user.totalDiscount = user.confirmedPurchases.length * 5;
+
+user.level = Math.floor(user.confirmedPurchases.length / 5) + 1;
+
+
+localStorage.setItem('users', JSON.stringify(users));
+
+return true;
+
+}
+
+}
+
+return false;
+
+}
+
+function resetPurchase(userPhone, referralPhone) {
+
+const users = JSON.parse(localStorage.getItem('users') || '{}');
+
+const user = users[userPhone];
+
+
+if (user && user.referrals) {
+
+const referralIndex = user.referrals.findIndex(ref =>
+
+(typeof ref === 'string' ? ref : ref.phone) === referralPhone
+
+);
+
+
+if (referralIndex !== -1) {
+
+if (typeof user.referrals[referralIndex] === 'object') {
+
+user.referrals[referralIndex].hasPurchased = false;
+
+user.referrals[referralIndex].purchaseType = null;
+
+user.referrals[referralIndex].purchaseDate = null;
+
+}
+
+
+// Remove from confirmed purchases
+
+if (user.confirmedPurchases) {
+
+user.confirmedPurchases = user.confirmedPurchases.filter(p => p.phone !== referralPhone);
+
+user.totalDiscount = user.confirmedPurchases.length * 5;
+
+user.level = Math.floor(user.confirmedPurchases.length / 5) + 1;
+
+}
+
+
+localStorage.setItem('users', JSON.stringify(users));
+
+return true;
+
+}
+
+}
+
+return false;
+
+}
+
+function showAdminPanel() {
+
+document.getElementById('adminModal').classList.remove('hidden');
+
+document.getElementById('adminModal').classList.add('flex');
+
+loadAdminData();
+
+}
+
+function closeAdminModal() {
+
+document.getElementById('adminModal').classList.add('hidden');
+
+document.getElementById('adminModal').classList.remove('flex');
+
+}
+
+function loadAdminData() {
+
+const users = JSON.parse(localStorage.getItem('users') || '{}');
+
+const userListContainer = document.getElementById('adminUserList');
+
+
+let userListHTML = '';
+
+Object.values(users).forEach(user => {
+
+const referralCount = user.referrals ? user.referrals.length : 0;
+
+const confirmedCount = user.confirmedPurchases ? user.confirmedPurchases.length : 0;
+
+
+userListHTML += `
+
+<div class="p-3 border border-gray-200 rounded-xl hover:bg-gray-50 cursor-pointer" onclick="selectUserForAdmin('${user.phone}')">
+
+<div class="font-semibold">${user.phone}</div>
+
+<div class="text-sm text-gray-600">کد: ${user.referralCode}</div>
+
+<div class="text-sm text-emerald-600">معرف‌ها: ${referralCount} | تایید شده: ${confirmedCount}</div>
+
+</div>
+
+`;
+
+});
+
+
+userListContainer.innerHTML = userListHTML || '<p class="text-gray-500">کاربری یافت نشد</p>';
+
+}
+
+let selectedAdminUser = null;
+
+function selectUserForAdmin(userPhone) {
+
+selectedAdminUser = userPhone;
+
+const users = JSON.parse(localStorage.getItem('users') || '{}');
+
+const user = users[userPhone];
+
+
+if (!user) return;
+
+
+// Update selected user info
+
+document.getElementById('selectedUserInfo').innerHTML = `
+
+<div class="font-semibold text-lg">${user.phone}</div>
+
+<div class="text-sm text-gray-600">کد معرف: ${user.referralCode}</div>
+
+<div class="text-sm text-emerald-600">تخفیف کل: $${user.totalDiscount || 0}</div>
+
+`;
+
+
+// Load referral purchases
+
+const purchasesContainer = document.getElementById('referralPurchasesList');
+
+let purchasesHTML = '';
+
+
+if (user.referrals && user.referrals.length > 0) {
+
+user.referrals.forEach((referral, index) => {
+
+const referralPhone = typeof referral === 'string' ? referral : referral.phone;
+
+const hasPurchased = typeof referral === 'object' ? referral.hasPurchased : false;
+
+const purchaseType = typeof referral === 'object' ? referral.purchaseType : null;
+
+
+const statusClass = hasPurchased ? 'bg-emerald-50 border-emerald-200' : 'bg-orange-50 border-orange-200';
+
+const buttonClass = hasPurchased ? 'bg-red-500 hover:bg-red-600' : 'bg-emerald-500 hover:bg-emerald-600';
+
+const buttonText = hasPurchased ? 'لغو تایید' : 'تایید خرید';
+
+const buttonAction = hasPurchased ?
+
+`resetPurchase('${userPhone}', '${referralPhone}')` :
+
+`showPurchaseConfirmDialog('${userPhone}', '${referralPhone}')`;
+
+
+purchasesHTML += `
+
+<div class="p-3 ${statusClass} border rounded-xl">
+
+<div class="flex justify-between items-center">
+
+<div>
+
+<div class="font-semibold">${referralPhone}</div>
+
+<div class="text-sm text-gray-600">
+
+${hasPurchased ? `✅ ${purchaseType}` : '⏳ منتظر تایید'}
+
+</div>
+
+</div>
+
+<button onclick="${buttonAction}" class="${buttonClass} text-white px-3 py-1 rounded text-sm transition-colors">
+
+${buttonText}
+
+</button>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+} else {
+
+purchasesHTML = '<p class="text-gray-500">معرفی وجود ندارد</p>';
+
+}
+
+
+purchasesContainer.innerHTML = purchasesHTML;
+
+}
+
+function showPurchaseConfirmDialog(userPhone, referralPhone) {
+
+const purchaseType = prompt('نوع خرید را انتخاب کنید:\n1. پایه (هفتگی)\n2. حرفه‌ای (ماهانه)\n3. VIP (سه ماهه)\n4. مشاوره\n\nشماره را وارد کنید:');
+
+
+const types = {
+
+'1': 'پایه',
+
+'2': 'حرفه‌ای',
+
+'3': 'VIP',
+
+'4': 'مشاوره'
+
+};
+
+
+if (types[purchaseType]) {
+
+if (confirmPurchase(userPhone, referralPhone, types[purchaseType])) {
+
+selectUserForAdmin(userPhone); // Refresh the display
+
+updateReferralDisplay(); // Update main display if current user
+
+alert('خرید تایید شد!');
+
+}
+
+}
+
+}
+
+function confirmAllPurchases() {
+
+if (!selectedAdminUser) {
+
+alert('ابتدا کاربری را انتخاب کنید');
+
+return;
+
+}
+
+
+const users = JSON.parse(localStorage.getItem('users') || '{}');
+
+const user = users[selectedAdminUser];
+
+
+if (user && user.referrals) {
+
+user.referrals.forEach(referral => {
+
+const referralPhone = typeof referral === 'string' ? referral : referral.phone;
+
+const hasPurchased = typeof referral === 'object' ? referral.hasPurchased : false;
+
+
+if (!hasPurchased) {
+
+confirmPurchase(selectedAdminUser, referralPhone, 'حرفه‌ای');
+
+}
+
+});
+
+
+selectUserForAdmin(selectedAdminUser);
+
+updateReferralDisplay();
+
+alert('همه خریدها تایید شدند!');
+
+}
+
+}
+
+function resetAllPurchases() {
+
+if (!selectedAdminUser) {
+
+alert('ابتدا کاربری را انتخاب کنید');
+
+return;
+
+}
+
+
+if (!confirm('آیا مطمئن هستید که می‌خواهید همه خریدها را ریست کنید؟')) {
+
+return;
+
+}
+
+
+const users = JSON.parse(localStorage.getItem('users') || '{}');
+
+const user = users[selectedAdminUser];
+
+
+if (user && user.referrals) {
+
+user.referrals.forEach(referral => {
+
+const referralPhone = typeof referral === 'string' ? referral : referral.phone;
+
+resetPurchase(selectedAdminUser, referralPhone);
+
+});
+
+
+selectUserForAdmin(selectedAdminUser);
+
+updateReferralDisplay();
+
+alert('همه خریدها ریست شدند!');
+
+}
+
+}
+
+// Keyboard shortcut for admin panel
+
+document.addEventListener('keydown', function(e) {
+
+if (e.ctrlKey && e.shiftKey && e.key === 'A') {
+
+e.preventDefault();
+
+showAdminPanel();
+
+}
+
+});
+
+function copyReferralCode() {
+
+const currentUser = getCurrentUser();
+
+if (currentUser) {
+
+navigator.clipboard.writeText(currentUser.referralCode).then(() => {
+
+alert('کد معرف کپی شد! 📋');
+
+});
+
+}
+
+}
+
+function selectPlan(planType) {
+
+const plans = {
+
+basic: {
+
+name: 'پایه',
+
+price: 10,
+
+duration: 'هفتگی'
+
+},
+
+premium: {
+
+name: 'حرفه‌ای',
+
+price: 25,
+
+duration: 'ماهانه'
+
+},
+
+vip: {
+
+name: 'VIP',
+
+price: 60,
+
+duration: 'سه ماهه'
+
+},
+
+consultation: {
+
+name: 'مشاوره تخصصی',
+
+price: 99,
+
+duration: 'یک ساعت'
+
+}
+
+};
+
+const selectedPlan = plans[planType];
+
+const currentUser = getCurrentUser();
+
+
+// Use the new discount calculation function
+
+const { finalPrice, discountText } = calculateDiscount(currentUser, planType, selectedPlan.price);
+
+
+// Show/hide discount info
+
+if (discountText) {
+
+document.getElementById('discountInfo').classList.remove('hidden');
+
+document.getElementById('discountAmount').textContent = discountText;
+
+} else {
+
+document.getElementById('discountInfo').classList.add('hidden');
+
+}
+
+
+document.getElementById('selectedPlanInfo').innerHTML = `
+
+<div class="bg-gray-50 p-6 rounded-xl">
+
+<h5 class="font-bold text-xl">${selectedPlan.name}</h5>
+
+${finalPrice !== selectedPlan.price ? `
+
+<div class="text-lg text-gray-500 line-through">$${selectedPlan.price}</div>
+
+<p class="text-3xl font-bold text-emerald-600">$${finalPrice}</p>
+
+` : `
+
+<p class="text-3xl font-bold text-emerald-600">$${selectedPlan.price}</p>
+
+`}
+
+<p class="text-gray-600 text-lg">${selectedPlan.duration}</p>
+
+</div>
+
+`;
+
+
+document.getElementById('purchaseModal').classList.remove('hidden');
+
+document.getElementById('purchaseModal').classList.add('flex');
+
+}
+
+function closePurchaseModal() {
+
+document.getElementById('purchaseModal').classList.add('hidden');
+
+document.getElementById('purchaseModal').classList.remove('flex');
+
+}
+
+function showContactInfo() {
+
+document.getElementById('contactModal').classList.remove('hidden');
+
+document.getElementById('contactModal').classList.add('flex');
+
+}
+
+function closeContactModal() {
+
+document.getElementById('contactModal').classList.add('hidden');
+
+document.getElementById('contactModal').classList.remove('flex');
+
+}
+
+// Media Modal Functions
+
+function openMediaModal(category) {
+
+const categories = {
+
+educational: {
+
+title: '📚 محتوای آموزشی',
+
+description: 'دوره‌ها و آموزش‌های تخصصی معاملات',
+
+items: [
+
+{ type: 'pdf', title: 'راهنمای کامل تحلیل تکنیکال', size: '2.5 MB', icon: '📄' },
+
+{ type: 'video', title: 'دوره جامع کندل استیک', size: '450 MB', icon: '🎥' },
+
+{ type: 'pdf', title: 'استراتژی‌های معاملاتی حرفه‌ای', size: '1.8 MB', icon: '📊' },
+
+{ type: 'audio', title: 'پادکست: اشتباهات رایج معامله‌گران', size: '85 MB', icon: '🎧' },
+
+{ type: 'video', title: 'آموزش مدیریت ریسک', size: '320 MB', icon: '🎬' },
+
+{ type: 'pdf', title: 'چک لیست معاملات روزانه', size: '0.5 MB', icon: '✅' }
+
+]
+
+},
+
+psychology: {
+
+title: '🧠 روانشناسی معاملات',
+
+description: 'منابع روانشناسی و کنترل احساسات در معاملات',
+
+items: [
+
+{ type: 'pdf', title: 'روانشناسی بازارهای مالی', size: '3.2 MB', icon: '🧠' },
+
+{ type: 'audio', title: 'مدیتیشن برای معامله‌گران', size: '120 MB', icon: '🧘' },
+
+{ type: 'video', title: 'کنترل ترس و طمع در معاملات', size: '280 MB', icon: '😌' },
+
+{ type: 'pdf', title: 'تکنیک‌های آرامش ذهن', size: '1.5 MB', icon: '🕯️' },
+
+{ type: 'audio', title: 'موسیقی آرامش‌بخش برای معاملات', size: '95 MB', icon: '🎵' },
+
+{ type: 'video', title: 'مصاحبه با روانشناس معاملات', size: '380 MB', icon: '🎤' }
+
+]
+
+},
+
+documents: {
+
+title: '📄 اسناد و مدارک',
+
+description: 'فایل‌های PDF، گزارش‌ها و اسناد مهم',
+
+items: [
+
+{ type: 'pdf', title: 'گزارش تحلیل بازار هفتگی', size: '2.1 MB', icon: '📈' },
+
+{ type: 'pdf', title: 'جدول اقتصادی مهم', size: '0.8 MB', icon: '📅' },
+
+{ type: 'image', title: 'چارت‌های تحلیلی', size: '5.2 MB', icon: '📊' },
+
+{ type: 'pdf', title: 'راهنمای استفاده از پلتفرم', size: '1.2 MB', icon: '📖' },
+
+{ type: 'image', title: 'اینفوگرافیک نکات مهم', size: '3.8 MB', icon: '🖼️' },
+
+{ type: 'pdf', title: 'قوانین و مقررات معاملات', size: '2.5 MB', icon: '⚖️' }
+
+]
+
+},
+
+media: {
+
+title: '🎬 رسانه و سرگرمی',
+
+description: 'ویدیوها، موسیقی و محتوای تصویری',
+
+items: [
+
+{ type: 'video', title: 'مستند: تاریخ بازارهای مالی', size: '1.2 GB', icon: '🎞️' },
+
+{ type: 'audio', title: 'پلی‌لیست موسیقی کار', size: '180 MB', icon: '🎶' },
+
+{ type: 'video', title: 'وبینار زنده با اساتید', size: '850 MB', icon: '📹' },
+
+{ type: 'image', title: 'گالری تصاویر انگیزشی', size: '25 MB', icon: '🖼️' },
+
+{ type: 'audio', title: 'کتاب صوتی: معامله‌گر موفق', size: '320 MB', icon: '📚' },
+
+{ type: 'video', title: 'کلیپ‌های آموزشی کوتاه', size: '420 MB', icon: '🎥' }
+
+]
+
+}
+
+};
+
+
+const categoryData = categories[category];
+
+document.getElementById('mediaModalTitle').innerHTML = categoryData.title;
+
+document.querySelector('#mediaModal p').textContent = categoryData.description;
+
+
+let contentHTML = '';
+
+categoryData.items.forEach(item => {
+
+const typeColors = {
+
+pdf: 'bg-red-50 border-red-200 text-red-800',
+
+video: 'bg-blue-50 border-blue-200 text-blue-800',
+
+audio: 'bg-green-50 border-green-200 text-green-800',
+
+image: 'bg-purple-50 border-purple-200 text-purple-800'
+
+};
+
+
+const colorClass = typeColors[item.type] || 'bg-gray-50 border-gray-200 text-gray-800';
+
+
+contentHTML += `
+
+<div class="border border-gray-200 rounded-xl p-4 hover:shadow-lg transition-all duration-300 cursor-pointer group">
+
+<div class="flex items-center mb-3">
+
+<div class="text-3xl mr-3 group-hover:scale-110 transition-transform">${item.icon}</div>
+
+<div class="flex-1">
+
+<div class="font-semibold text-gray-800 text-sm">${item.title}</div>
+
+<div class="text-xs text-gray-500">${item.size}</div>
+
+</div>
+
+</div>
+
+<div class="flex justify-between items-center">
+
+<span class="px-2 py-1 rounded-full text-xs font-medium ${colorClass}">
+
+${item.type.toUpperCase()}
+
+</span>
+
+<button class="bg-emerald-600 text-white px-3 py-1 rounded-lg text-xs hover:bg-emerald-700 transition-colors">
+
+دانلود
+
+</button>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+
+document.getElementById('mediaContent').innerHTML = contentHTML;
+
+document.getElementById('mediaModal').classList.remove('hidden');
+
+document.getElementById('mediaModal').classList.add('flex');
+
+}
+
+
+function closeMediaModal() {
+
+document.getElementById('mediaModal').classList.add('hidden');
+
+document.getElementById('mediaModal').classList.remove('flex');
+
+}
+
+// Update discount calculation for 100 referrals
+
+function calculateDiscount(currentUser, planType, planPrice) {
+
+let finalPrice = planPrice;
+
+let discountText = '';
+
+
+if (currentUser) {
+
+const confirmedCount = currentUser.confirmedPurchases ? currentUser.confirmedPurchases.length : 0;
+
+
+// Special 50% discount for monthly plan with 100+ referrals
+
+if (planType === 'premium' && confirmedCount >= 100) {
+
+finalPrice = Math.round(planPrice * 0.5);
+
+discountText = '🎉 تخفیف ویژه ۵۰٪ برای ۱۰۰ معرف!';
+
+}
+
+// Regular referral discount
+
+else if (currentUser.referredBy) {
+
+finalPrice = Math.round(planPrice * 0.9);
+
+discountText = 'تخفیف ۱۰٪ برای معرف شدن';
+
+}
+
+// Accumulated discount from referrals
+
+else if (currentUser.totalDiscount > 0) {
+
+const discount = Math.min(currentUser.totalDiscount, planPrice);
+
+finalPrice = planPrice - discount;
+
+discountText = `تخفیف $${discount} از معرف‌ها`;
+
+}
+
+}
+
+
+return { finalPrice, discountText };
+
+}
+
+// Close modals when clicking outside
+
+document.getElementById('contactModal').addEventListener('click', function(e) {
+
+if (e.target === this) {
+
+closeContactModal();
+
+}
+
+});
+
+document.getElementById('purchaseModal').addEventListener('click', function(e) {
+
+if (e.target === this) {
+
+closePurchaseModal();
+
+}
+
+});
+
+document.getElementById('mediaModal').addEventListener('click', function(e) {
+
+if (e.target === this) {
+
+closeMediaModal();
+
+}
+
+});
+
+</script>
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96735ed694628d75',t:'MTc1Mzg2MjkzMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+
+</html>
